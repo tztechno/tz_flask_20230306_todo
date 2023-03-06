@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO List</title>
+</head>
+
+<body>
+    <h1>TODO List</h1>
+
+    <h2>Add New Item</h2>
+    <form action="/insert" method="POST">
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" required>
+        <label for="text">Text:</label>
+        <input type="text" name="text" id="text" required>
+        <input type="submit" value="Insert">
+    </form>
+
+
+    <h2>Delete Item</h2>
+    <form action="/delete" method="POST">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" required>
+        <input type="submit" value="Delete">
+    </form>
+
+    {% if todo_items %}
+    <h2>All Items</h2>
+    <ul>
+        {% for item in todo_items %}
+        <li>ID:{{ item.id }} : {{ item.date }} : {{ item.text }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>No items found.</h2>
+    {% endif %}
+
+</body>
+
+</html>
