@@ -11,4 +11,4 @@ flask todo list
 * export FLASK_ENV=development
 * flask run
 
-[todo](./todo.png)
+![todo](todo.png)
