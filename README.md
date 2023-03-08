@@ -11,4 +11,5 @@ flask todo list
 * export FLASK_ENV=development
 * flask run
 
-<img src="todo.png" width="600">
+## view sample
+<img src="todo.png" width="500">
